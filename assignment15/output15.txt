@@ -1,0 +1,24 @@
+Assignment 15: Indexes and Adding a Row
+
+Task 1: Create the index idx_city
+CREATE INDEX idx_city ON customer (city);
+
+Task 2: Customers who live in Delhi, sorted by name
+SELECT name FROM customer WHERE city = 'Delhi' ORDER BY name;
+
+name
+------
+Asha
+Deepak
+
+Task 3: Add customer 5, Arjun, Pune
+INSERT INTO customer (customer_id, name, city) VALUES (5, 'Arjun', 'Pune');
+SELECT * FROM customer;
+
+customer_id  name    city
+-----------  ------  ------
+          1  Kiran   Kochi
+          2  Deepak  Delhi
+          3  Lata    Mumbai
+          4  Asha    Delhi
+          5  Arjun   Pune

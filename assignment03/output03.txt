@@ -1,0 +1,27 @@
+Assignment 3: Selecting Columns and Rows with WHERE
+
+Task 1: Show only name and marks
+SELECT name, marks FROM student;
+
+name    marks
+------  -----
+Asha       78
+Rohan      64
+Neha       88
+Deepak     52
+
+Task 2: Students with marks greater than 60
+SELECT * FROM student WHERE marks > 60;
+
+roll_no  name   marks
+-------  -----  -----
+    101  Asha      78
+    102  Rohan     64
+    103  Neha      88
+
+Task 3: Name of the student whose roll_no is 103
+SELECT name FROM student WHERE roll_no = 103;
+
+name
+----
+Neha

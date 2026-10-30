@@ -1,0 +1,20 @@
+Assignment 14: Creating and Using a View
+
+Task 1: Create the view high_scores
+CREATE VIEW high_scores AS SELECT name, marks FROM score WHERE marks >= 70;
+
+Task 2: Show all rows of the view
+SELECT * FROM high_scores;
+
+name  marks
+----  -----
+Asha     78
+Neha     88
+
+Task 3: Show only the names, sorted
+SELECT name FROM high_scores ORDER BY name;
+
+name
+----
+Asha
+Neha

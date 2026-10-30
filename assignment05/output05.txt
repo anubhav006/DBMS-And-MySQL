@@ -1,0 +1,23 @@
+Assignment 5: Pattern Matching with LIKE
+
+Task 1: Titles that start with Data
+SELECT title FROM book WHERE title LIKE 'Data%';
+
+title
+--------------------
+Database Systems
+Data Structures in C
+
+Task 2: Titles that end with C
+SELECT title FROM book WHERE title LIKE '%C';
+
+title
+--------------------
+Data Structures in C
+
+Task 3: Titles whose second letter is h
+SELECT title FROM book WHERE title LIKE '_h%';
+
+title
+-------------
+Short Stories

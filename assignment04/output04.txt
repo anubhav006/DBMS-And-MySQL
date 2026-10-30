@@ -1,0 +1,24 @@
+Assignment 4: Combining Conditions
+
+Task 1: Eagles players with more than 35 runs (AND)
+SELECT name, runs FROM player WHERE team = 'Eagles' AND runs > 35;
+
+name  runs
+----  ----
+Asha    45
+
+Task 2: Runs between 40 and 80 (BETWEEN)
+SELECT name, runs FROM player WHERE runs BETWEEN 40 AND 80;
+
+name   runs
+-----  ----
+Asha     45
+Meera    72
+
+Task 3: Players of Tigers or Lions (IN)
+SELECT name, team FROM player WHERE team IN ('Tigers', 'Lions');
+
+name   team
+-----  ------
+Meera  Tigers
+Kiran  Lions

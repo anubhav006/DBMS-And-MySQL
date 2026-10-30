@@ -1,0 +1,24 @@
+Assignment 8: Grouping Rows and Using HAVING
+
+Task 1: Number of sales in each region
+SELECT region, COUNT(*) AS num_sales FROM shop_sale GROUP BY region ORDER BY region;
+
+region  num_sales
+------  ---------
+North           2
+South           2
+
+Task 2: Total amount in each region
+SELECT region, SUM(amount) AS total FROM shop_sale GROUP BY region ORDER BY region;
+
+region  total
+------  -----
+North   23000
+South   18000
+
+Task 3: Regions with total more than 20000 (HAVING)
+SELECT region, SUM(amount) AS total FROM shop_sale GROUP BY region HAVING SUM(amount) > 20000 ORDER BY region;
+
+region  total
+------  -----
+North   23000

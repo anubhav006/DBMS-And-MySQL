@@ -1,0 +1,31 @@
+Assignment 13: UNION and INTERSECT
+
+Task 1: UNION: all names once
+SELECT student_name FROM club_a UNION SELECT student_name FROM club_b ORDER BY student_name;
+
+student_name
+------------
+Asha
+Meera
+Neha
+Pooja
+Rohan
+
+Task 2: INTERSECT: names in both clubs
+SELECT student_name FROM club_a INTERSECT SELECT student_name FROM club_b ORDER BY student_name;
+
+student_name
+------------
+Neha
+
+Task 3: UNION ALL: all names with repeats
+SELECT student_name FROM club_a UNION ALL SELECT student_name FROM club_b ORDER BY student_name;
+
+student_name
+------------
+Asha
+Meera
+Neha
+Neha
+Pooja
+Rohan

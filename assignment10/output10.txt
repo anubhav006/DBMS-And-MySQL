@@ -1,0 +1,29 @@
+Assignment 10: Joining Two Tables with INNER JOIN
+
+Task 1: Employee name with department name
+SELECT employee.emp_name, department.dept_name FROM employee INNER JOIN department ON employee.dept_id = department.dept_id ORDER BY employee.emp_name;
+
+emp_name  dept_name
+--------  ---------
+Anita     Accounts
+Deepak    Accounts
+Lata      Sales
+Pooja     Sales
+
+Task 2: Employees in the Sales department
+SELECT employee.emp_name FROM employee INNER JOIN department ON employee.dept_id = department.dept_id WHERE department.dept_name = 'Sales' ORDER BY employee.emp_name;
+
+emp_name
+--------
+Lata
+Pooja
+
+Task 3: Name, department and salary, highest salary first
+SELECT employee.emp_name, department.dept_name, employee.salary FROM employee INNER JOIN department ON employee.dept_id = department.dept_id ORDER BY employee.salary DESC;
+
+emp_name  dept_name  salary
+--------  ---------  ------
+Anita     Accounts    90000
+Deepak    Accounts    60000
+Lata      Sales       55000
+Pooja     Sales       42000

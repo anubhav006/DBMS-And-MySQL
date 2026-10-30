@@ -1,0 +1,24 @@
+Assignment 12: Using a Subquery
+
+Task 1: Names in club_a that are also in club_b
+SELECT student_name FROM club_a WHERE student_name IN (SELECT student_name FROM club_b);
+
+student_name
+------------
+Neha
+
+Task 2: Number of names in club_b
+SELECT COUNT(*) AS members FROM club_b;
+
+members
+-------
+      3
+
+Task 3: Names in club_a, sorted
+SELECT student_name FROM club_a ORDER BY student_name;
+
+student_name
+------------
+Asha
+Neha
+Rohan

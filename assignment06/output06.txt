@@ -1,0 +1,28 @@
+Assignment 6: Sorting Rows and Removing Repeats
+
+Task 1: All products sorted by price, highest first
+SELECT product_name, price FROM product ORDER BY price DESC;
+
+product_name  price
+------------  -----
+Calculator      850
+Bag             500
+Notebook         60
+Pen              15
+
+Task 2: Each category once, sorted
+SELECT DISTINCT category FROM product ORDER BY category;
+
+category
+-----------
+Electronics
+Office
+Stationery
+
+Task 3: Two most expensive products
+SELECT product_name, price FROM product ORDER BY price DESC LIMIT 2;
+
+product_name  price
+------------  -----
+Calculator      850
+Bag             500

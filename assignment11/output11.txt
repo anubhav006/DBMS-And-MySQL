@@ -1,0 +1,35 @@
+Assignment 11: Other Kinds of Joins
+
+Task 1: LEFT JOIN: every team with its players
+SELECT team.team_name, player.player_name FROM team LEFT JOIN player ON team.team_id = player.team_id ORDER BY team.team_name, player.player_name;
+
+team_name  player_name
+---------  -----------
+Eagles     Asha
+Eagles     Meera
+Lions
+Tigers     Arjun
+
+Task 2: CROSS JOIN: every team and player pair
+SELECT team.team_name, player.player_name FROM team CROSS JOIN player ORDER BY team.team_name, player.player_name;
+
+team_name  player_name
+---------  -----------
+Eagles     Arjun
+Eagles     Asha
+Eagles     Meera
+Lions      Arjun
+Lions      Asha
+Lions      Meera
+Tigers     Arjun
+Tigers     Asha
+Tigers     Meera
+
+Task 3: NATURAL JOIN: player with team name
+SELECT player_name, team_name FROM player NATURAL JOIN team ORDER BY player_name;
+
+player_name  team_name
+-----------  ---------
+Arjun        Tigers
+Asha         Eagles
+Meera        Eagles

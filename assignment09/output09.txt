@@ -1,0 +1,31 @@
+Assignment 9: Aliases and CASE
+
+Task 1: Rename columns with AS
+SELECT name AS student_name, marks AS score FROM exam_result;
+
+student_name  score
+------------  -----
+Asha             92
+Rohan            47
+Neha             68
+Meera            33
+
+Task 2: Pass / Fail with CASE
+SELECT name, CASE WHEN marks >= 40 THEN 'Pass' ELSE 'Fail' END AS result FROM exam_result;
+
+name   result
+-----  ------
+Asha   Pass
+Rohan  Pass
+Neha   Pass
+Meera  Fail
+
+Task 3: Marks with 5 bonus marks
+SELECT name, marks + 5 AS with_bonus FROM exam_result;
+
+name   with_bonus
+-----  ----------
+Asha           97
+Rohan          52
+Neha           73
+Meera          38

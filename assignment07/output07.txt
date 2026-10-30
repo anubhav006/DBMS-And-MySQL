@@ -1,0 +1,22 @@
+Assignment 7: Using Aggregate Functions
+
+Task 1: Number of sales rows
+SELECT COUNT(*) AS num_sales FROM sales;
+
+num_sales
+---------
+        4
+
+Task 2: Total of all amounts
+SELECT SUM(amount) AS total FROM sales;
+
+total
+-----
+41000
+
+Task 3: Highest amount
+SELECT MAX(amount) AS highest FROM sales;
+
+highest
+-------
+  12000
